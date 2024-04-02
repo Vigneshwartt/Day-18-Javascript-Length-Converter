@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> Length converter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Length Converter</h1>
+        <div class="whole">
+        <div>
+            <h2>Cm to Inches</h2>
+        </div>
+        <div id="one">
+            <input type="text" placeholder="Enter the number" id="input">
+        </div>
+        <br>
+        <div >
+            <button type="submit" onclick="convert()">Convert to Inches</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function convert()
+        {
+            let cm=Number(document.getElementById("input").value);
+            let inch=cm/2.54;
+            let result=document.getElementById("result")
+            result.innerHTML=inch.toFixed(2)+" inches";
+
+        }
+         </script>
+    </body>
+</html>
